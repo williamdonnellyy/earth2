@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Earth2</title>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="./lib/maplibre-grid.min.js"></script>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="map"></div>
+
+    <div id="top-bar">
+      <div class="selected-row">
+        <div class="left-part">
+          <img class="tiles-img" src="./assets/icons/tiles.svg" />
+          <span class="selected-head selected-show" id="no-selected"
+            >No Tiles Selected</span
+          >
+          <span class="selected-head" id="has-selected">
+            <span class="selected-count">
+              <span id="tile-counts">0</span>
+              /
+              <span>1000</span>
+            </span>
+            <span class="selected">Tiles Selected</span>
+          </span>
+        </div>
+        <!-- <img class="arrow-up" src="./assets/icons/arrow-up.svg" /> -->
+      </div>
+      <div class="detail-row" id="has-details">
+        <button class="details-button" id="show-details">DETAILS</button>
+        <button class="clear-selection" id="remove-selected">
+          <img src="./assets/icons/trash.svg" />
+          clear selection
+        </button>
+      </div>
+      <div class="resource-container" id="has-resource">
+        <div class="first-row" id="resources-btn">
+          <div class="resources">
+            <div class="left">
+              <svg
+                class="mr-3 text-primary"
+                width="20"
+                height="21"
+                viewBox="0 0 20 21"
+              >
+                <path
+                  d="M18.2922 7.2158L17.3709 7.69484L14.1927 9.32543L13.3451 7.68563L16.4589 6.08268L17.3433 5.63128L18.4395 5.06932L9.99183 0.5L1.7652 5.17066L2.6588 5.63128L3.71822 6.1748H3.72743L6.65696 7.68563L5.80942 9.32543L2.63117 7.69484L1.70993 7.2158L0.788696 6.74597V15.6175L9.07981 20.5V19.459V18.3627V15.2213H10.9223V18.3627V19.459V20.5L19.2134 15.6175V6.74597L18.2922 7.2158ZM10.001 13.5263C8.47179 13.5263 7.23734 12.2918 7.23734 10.7626C7.23734 9.2333 8.47179 7.99885 10.001 7.99885C11.5303 7.99885 12.7647 9.2333 12.7647 10.7626C12.7647 12.2918 11.5303 13.5263 10.001 13.5263Z"
+                  fill="#58E5C2"
+                ></path>
+              </svg>
+              <div>Resources</div>
+            </div>
+            <span class="resources-arrow resources-expand" id="resources-arrow">
+              <img class="arrow-up-image" src="./assets/icons/arrow-up.svg" />
+              <img
+                class="arrow-down-image"
+                src="./assets/icons/arrow-down.svg"
+              />
+            </span>
+          </div>
+        </div>
+        <div class="resources-list resources-list-show" id="resources-list">
+          <div class="fresh-water">
+            <div class="title-container">
+              <div class="circle"></div>
+              <div>Freshwater</div>
+            </div>
+            <div class="amount"></div>
+          </div>
+          <div class="sand">
+            <div class="title-container">
+              <div class="circle"></div>
+              <div>Sand</div>
+            </div>
+            <div class="amount"></div>
+          </div>
+          <div class="limestone">
+            <div class="title-container">
+              <div class="circle"></div>
+              <div>Limestone</div>
+            </div>
+            <div class="amount"></div>
+          </div>
+          <div class="iron-one">
+            <div class="title-container">
+              <div class="circle"></div>
+              <div>Iron Ore</div>
+            </div>
+            <div class="amount"></div>
+          </div>
+          <div class="wood">
+            <div class="title-container">
+              <div class="circle"></div>
+              <div>Wood</div>
+            </div>
+            <div class="amount"></div>
+          </div>
+          <div class="coal">
+            <div class="title-container">
+              <div class="circle"></div>
+              <div>Coal</div>
+            </div>
+            <div class="amount"></div>
+          </div>
+          <div class="oil">
+            <div class="title-container">
+              <div class="circle"></div>
+              <div>Oil</div>
+            </div>
+            <div class="amount"></div>
+          </div>
+          <div class="gold">
+            <div class="title-container">
+              <div class="circle"></div>
+              <div>Gold</div>
+            </div>
+            <div class="amount"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
